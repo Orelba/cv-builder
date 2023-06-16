@@ -80,6 +80,7 @@ hr {
 
 /* Sidebar */
 .sidebar {
+  font-weight: 300;
   background-color: rgb(37, 56, 71);
   color: white;
   grid-row: 1 / -1;
