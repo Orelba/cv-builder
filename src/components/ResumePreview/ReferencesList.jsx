@@ -15,11 +15,15 @@ function Reference({ reference }) {
     <div className='reference-container'>
       <p className='name uppercase'>{name}</p>
       <p className='role-and-company'>
-        {role}{role && company && ', '}{company}.
+        {role}{role && company && ', '}{company}{(role || company) ? '.' : null}
       </p>
-      <br />
-      <p className='email'><b>Email:</b> {email}</p>
-      <p className='phone-number'><b>Mobile:</b> {phoneNumber}</p>
+      {(email || phoneNumber) ? <br /> : null}
+      {email &&
+        <p className='email'><b>Email:</b> {email}</p>
+      }
+      {phoneNumber &&
+        <p className='phone-number'><b>Mobile:</b> {phoneNumber}</p>
+      }
     </div>
   )
 }

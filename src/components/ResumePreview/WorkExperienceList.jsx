@@ -17,7 +17,8 @@ function Work({ work }) {
       <p className='work-time-period'>{timePeriod}</p>
       <p className='company'>
         <span className="company-name">{companyName}</span>
-        , <span className="company-location">{companyLocation}</span>
+        {companyName && companyLocation && ', '}
+        <span className="company-location">{companyLocation}</span>
       </p>
       <p className="description">{description}</p>
     </div>

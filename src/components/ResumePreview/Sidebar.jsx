@@ -1,4 +1,4 @@
-import Section from './Section'
+import Section from '../Section'
 import Avatar from './Avatar'
 import Contact from './Contact'
 import EducationInfoList from './EducationInfoList'
