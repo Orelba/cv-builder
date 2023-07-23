@@ -6,7 +6,7 @@ export default function Contact({ contact }) {
     <div className="contact">
       {(addressFirstLine || addressSecondLine) ?
         <div className="img-and-details">
-          <img src="/location.png" alt="Location" height={imgSize} width={imgSize} />
+          <img src="./location.png" alt="Location" height={imgSize} width={imgSize} />
           <p>
             {addressFirstLine}
             {addressFirstLine && <br />}
@@ -17,13 +17,13 @@ export default function Contact({ contact }) {
       }
       {phoneNumber &&
         <div className="img-and-details">
-          <img src="/phone.png" alt="Phone" height={imgSize} width={imgSize} />
+          <img src="./phone.png" alt="Phone" height={imgSize} width={imgSize} />
           <p>{phoneNumber}</p>
         </div>
       }
       {email &&
         <div className="img-and-details">
-          <img src="/email.png" alt="Email" height={imgSize} width={imgSize} />
+          <img src="./email.png" alt="Email" height={imgSize} width={imgSize} />
           <p>{email}</p>
         </div>
       }
