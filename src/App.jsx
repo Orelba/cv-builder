@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { cvExample, cvEmpty } from './PersonInfo'
 import { v4 as uuidv4 } from 'uuid'
 import BuilderUI from './components/BuilderUI/BuilderUI'
