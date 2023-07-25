@@ -3,6 +3,7 @@ import { cvExample, cvEmpty } from './PersonInfo'
 import { v4 as uuidv4 } from 'uuid'
 import BuilderUI from './components/BuilderUI/BuilderUI'
 import ResumePreview from './components/ResumePreview/ResumePreview'
+import GitHubIcon from './components/GitHubIcon'
 
 function App() {
   const [cv, setCv] = useState(cvExample)
@@ -160,29 +161,34 @@ function App() {
   }
 
   return (
-    <main>
-      <BuilderUI
-        cv={cv}
-        onChangePersonalInfo={handlePersonalInfoChange}
-        onChangeContact={handleContactChange}
-        onChangeSkill={handleSkillChange}
-        onAddSkill={handleSkillAdd}
-        onDeleteSkill={handleSkillDelete}
-        onChangeEducation={handleEducationChange}
-        onAddEducation={handleEducationAdd}
-        onDeleteEducation={handleEducationDelete}
-        onChangeWorkExperience={handleWorkExperienceChange}
-        onAddWorkExperience={handleWorkExperienceAdd}
-        onDeleteWorkExperience={handleWorkExperienceDelete}
-        onChangeReference={handleReferenceChange}
-        onAddReference={handleReferenceAdd}
-        onDeleteReference={handleReferenceDelete}
-        onExportPDF={handleExportPDF}
-        onResetForm={handleFormReset}
-        onLoadExampleCV={handleCVExampleLoad}
-      />
-      <ResumePreview cv={cv} />
-    </main>
+    <>
+      <main>
+        <BuilderUI
+          cv={cv}
+          onChangePersonalInfo={handlePersonalInfoChange}
+          onChangeContact={handleContactChange}
+          onChangeSkill={handleSkillChange}
+          onAddSkill={handleSkillAdd}
+          onDeleteSkill={handleSkillDelete}
+          onChangeEducation={handleEducationChange}
+          onAddEducation={handleEducationAdd}
+          onDeleteEducation={handleEducationDelete}
+          onChangeWorkExperience={handleWorkExperienceChange}
+          onAddWorkExperience={handleWorkExperienceAdd}
+          onDeleteWorkExperience={handleWorkExperienceDelete}
+          onChangeReference={handleReferenceChange}
+          onAddReference={handleReferenceAdd}
+          onDeleteReference={handleReferenceDelete}
+          onExportPDF={handleExportPDF}
+          onResetForm={handleFormReset}
+          onLoadExampleCV={handleCVExampleLoad}
+        />
+        <ResumePreview cv={cv} />
+      </main>
+      <footer>
+        <GitHubIcon link="https://github.com/Orelba/cv-builder" />
+      </footer>
+    </>
   )
 }
 
