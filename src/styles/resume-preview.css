@@ -194,7 +194,8 @@
     padding: 0 !important;
   }
 
-  .builder-ui-container {
+  .builder-ui-container,
+  .github-icon {
     display: none;
   }
   
